@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jai Abishek | Modern Workplace Architect</title>
+  <meta name="description" content="Full responsive resume dashboard for Jai Abishek, Client Infrastructure Architect." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-a"></div><div class="bg-orb orb-b"></div><div class="grid-noise"></div>
+  <aside class="sidebar glass icon-rail">
+    <a class="rail-avatar" href="#overview" aria-label="Jai Abishek - Home">
+      <img src="assets/jai.png" alt="Jai Abishek profile photo" />
+    </a>
+    <nav class="rail-nav">
+      <a href="#overview" class="active" data-label="Overview" aria-label="Overview">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+      </a>
+      <a href="#skills" data-label="Skills" aria-label="Skills">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 3"/></svg>
+      </a>
+      <a href="#experience" data-label="Experience" aria-label="Experience">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg>
+      </a>
+      <a href="#impact" data-label="Impact" aria-label="Impact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 11-12h-7l1-8z"/></svg>
+      </a>
+      <a href="#certifications" data-label="Certifications" aria-label="Certifications">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg>
+      </a>
+      <a href="#badges" data-label="Profiles" aria-label="Profiles">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
+      </a>
+      <a href="#contact" data-label="Contact" aria-label="Contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4z"/><path d="M4 5l8 7 8-7"/></svg>
+      </a>
+    </nav>
+  </aside>
+  <main>
+    <header class="topbar glass"><div class="topbar-identity"><h2 class="topbar-name">Jai Abishek</h2><p class="topbar-typed"><span id="typedRole" aria-live="polite"></span><span class="typed-caret" aria-hidden="true"></span></p></div><div class="top-actions"><button id="themeToggle" class="icon-btn">☾</button><a class="primary-btn" href="#contact">Connect</a></div></header>
+    <section id="overview" class="hero glass reveal"><div class="hero-copy"><span class="status-dot">14+ years of enterprise IT and Modern Workplace architecture</span><h1>Architecting AI-ready Microsoft cloud, identity, endpoint, and automation ecosystems.</h1><p>Experienced Modern Workplace Architect skilled in Azure OpenAI, Copilot, Entra ID, IAM, Windows 365, M365/O365, Intune, CyberArk, migrations, and PowerShell automation.</p> </div><div class="hero-panel">
+      <div id="domainRadar" class="orbit-radar" aria-label="Domain expertise radar">
+        <svg class="radar-grid" viewBox="-100 -100 200 200" aria-hidden="true">
+          <defs>
+            <radialGradient id="radarGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgba(37,213,255,.30)"/>
+              <stop offset="70%" stop-color="rgba(37,213,255,.05)"/>
+              <stop offset="100%" stop-color="rgba(37,213,255,0)"/>
+            </radialGradient>
+            <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="rgba(37,213,255,0)"/>
+              <stop offset="100%" stop-color="rgba(37,213,255,.55)"/>
+            </linearGradient>
+          </defs>
+          <circle cx="0" cy="0" r="92" fill="url(#radarGlow)"/>
+          <circle cx="0" cy="0" r="92" class="ring"/>
+          <circle cx="0" cy="0" r="68" class="ring"/>
+          <circle cx="0" cy="0" r="44" class="ring"/>
+          <circle cx="0" cy="0" r="20" class="ring"/>
+          <line x1="-92" y1="0" x2="92" y2="0" class="spoke"/>
+          <line x1="0" y1="-92" x2="0" y2="92" class="spoke"/>
+          <line x1="-65" y1="-65" x2="65" y2="65" class="spoke"/>
+          <line x1="-65" y1="65" x2="65" y2="-65" class="spoke"/>
+        </svg>
+        <svg class="radar-sweep" viewBox="-100 -100 200 200" aria-hidden="true">
+          <g class="sweep-rotor">
+            <path d="M0,0 L92,0 A92,92 0 0,0 46,-79.7 Z" fill="url(#sweepGrad)"/>
+            <line x1="0" y1="0" x2="92" y2="0" class="sweep-line"/>
+          </g>
+        </svg>
+        <div class="radar-core"><span id="radarCenterLabel">Domains</span></div>
+        <div class="radar-chip" data-domain="AI" data-score="93" data-angle="-90"><i></i><b>AI</b></div>
+        <div class="radar-chip" data-domain="M365" data-score="95" data-angle="-30"><i></i><b>M365</b></div>
+        <div class="radar-chip" data-domain="Identity" data-score="92" data-angle="30"><i></i><b>Identity</b></div>
+        <div class="radar-chip" data-domain="Endpoint" data-score="90" data-angle="90"><i></i><b>Endpoint</b></div>
+        <div class="radar-chip" data-domain="Automation" data-score="88" data-angle="150"><i></i><b>Automation</b></div>
+        <div class="radar-chip" data-domain="Security" data-score="86" data-angle="210"><i></i><b>Security</b></div>
+      </div>
+    </div></section>
+    <section class="stats-grid reveal premium-stats">
+      <article class="glass stat-card"><strong data-count="14">0</strong><span>Years Experience</span></article>
+      <article class="glass stat-card"><strong data-count="5">0</strong><span>Career Roles</span></article>
+      <article class="glass stat-card"><strong data-count="2">0</strong><span>Organizations</span></article>
+      <article class="glass stat-card"><strong data-count="10">0</strong><span>Skill Categories</span></article>
+      <article class="glass stat-card"><strong data-count="40">0</strong><span>Technologies</span></article>
+      <article class="glass stat-card"><strong data-count="5">0</strong><span>Certificates</span></article>
+      <article class="glass stat-card"><strong data-count="2">0</strong><span>Awards</span></article>
+      <article class="glass stat-card"><strong data-count="4">0</strong><span>Trainings</span></article>
+    </section>
+    <section id="skills" class="glass card full-section reveal"><div class="section-title"><span>01</span><h2>Full Skill Set</h2></div><p class="section-subtitle">Click the doughnut ring or any row on the left to view the full tools inside that skill family.</p><div class="skills-dashboard interactive-skills"><aside id="skillsLegend" class="skills-legend" aria-label="Skill category selector"></aside><div class="chart-wrap skills-ring-wrap"><canvas id="skillsRing"></canvas><div class="chart-center"><strong id="skillPercent">95%</strong><span id="skillName">Cloud/M365</span><small>Click a ring segment</small></div></div><div id="skillDetail" class="skill-detail compact-tools-panel"></div></div></section>
+    <section id="experience" class="glass card full-section reveal"><div class="section-title"><span>02</span><h2>Complete Career Timeline</h2></div><p class="section-subtitle">Every role below opens into a full-screen popup with detailed resume experience. Use search to filter by technology, responsibility, or role.</p><input id="experienceSearch" class="search-box" type="search" placeholder="Search experience: Azure OpenAI, Copilot, CyberArk, Intune, Exchange..."/><div id="experienceGrid" class="experience-grid"></div></section>
+    <section id="impact" class="impact-grid reveal">
+      <article class="glass card impact-project">
+        <header class="impact-head">
+          <span class="impact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v2H6a4 4 0 0 0 0 8h.5"/><path d="M12 2a4 4 0 0 1 4 4v2h2a4 4 0 0 1 0 8h-.5"/><path d="M8 16v2a4 4 0 0 0 8 0v-2"/><circle cx="12" cy="12" r="1.5"/></svg>
+          </span>
+          <div class="impact-titles">
+            <span class="impact-cat">Project 1 · AI / Endpoint</span>
+            <h3>AI-Assisted Endpoint & Infrastructure Insights</h3>
+          </div>
+          <span class="impact-rating">Exceeds Expectations</span>
+        </header>
+        <div class="impact-goals" aria-label="Company goals alignment">
+          <span>Innovation & AI Enablement</span>
+          <span>Operational Excellence</span>
+          <span>Cost Optimization</span>
+        </div>
+        <div class="impact-cols">
+          <div>
+            <h4>Contribution</h4>
+            <ul>
+              <li>Enabled AI-driven analytics for endpoint and identity operations.</li>
+              <li>Integrated AI insights into operational workflows with proper security guardrails.</li>
+              <li>Reduced reliance on manual analysis and reactive troubleshooting.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Measurable Impact</h4>
+            <ul>
+              <li>~10–15% reduction in manual operational analysis time.</li>
+              <li>Faster detection of endpoint health and compliance issues.</li>
+              <li>Improved data-driven decision-making for infrastructure operations.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="impact-justification"><strong>Justification:</strong> Delivered meaningful AI value early in the year with tangible efficiency gains, while ensuring security and architectural integrity. Contribution went beyond design by influencing how teams operationally consume AI insights.</p>
+      </article>
+
+      <article class="glass card impact-project">
+        <header class="impact-head">
+          <span class="impact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </span>
+          <div class="impact-titles">
+            <span class="impact-cat">Project 2 · Identity & Security</span>
+            <h3>Identity Security Modernization <em>(Zero Trust Alignment)</em></h3>
+          </div>
+          <span class="impact-rating">Exceeds Expectations</span>
+        </header>
+        <div class="impact-goals" aria-label="Company goals alignment">
+          <span>Security & Risk Reduction</span>
+          <span>Operational Excellence</span>
+          <span>Modernization & Cloud Adoption</span>
+        </div>
+        <div class="impact-cols">
+          <div>
+            <h4>Contribution</h4>
+            <ul>
+              <li>Designed and optimized Conditional Access, MFA, and device trust models.</li>
+              <li>Closed identity security gaps and improved audit readiness.</li>
+              <li>Aligned endpoint compliance with identity enforcement.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Measurable Impact</h4>
+            <ul>
+              <li>Reduced identity-related security risks and misconfigurations.</li>
+              <li>Fewer access-related support issues due to standardized policies.</li>
+              <li>Lower compliance remediation effort during audits.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="impact-justification"><strong>Justification:</strong> Played a key architectural role in significantly strengthening the identity security posture. Contributions directly reduced enterprise risk and improved compliance outcomes with minimal user friction.</p>
+      </article>
+
+      <article class="glass card impact-project">
+        <header class="impact-head">
+          <span class="impact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8"/><path d="M12 16v4"/><path d="M7 9h4M7 12h2"/></svg>
+          </span>
+          <div class="impact-titles">
+            <span class="impact-cat">Project 3 · Endpoint</span>
+            <h3>Modern Endpoint Management Standardization</h3>
+          </div>
+          <span class="impact-rating">Exceeds Expectations</span>
+        </header>
+        <div class="impact-goals" aria-label="Company goals alignment">
+          <span>Operational Excellence</span>
+          <span>Cost Optimization</span>
+          <span>Modernization & Cloud Adoption</span>
+        </div>
+        <div class="impact-cols">
+          <div>
+            <h4>Contribution</h4>
+            <ul>
+              <li>Architected cloud-first endpoint management standards.</li>
+              <li>Defined security baselines, compliance policies, and lifecycle processes.</li>
+              <li>Reduced dependency on legacy endpoint management tooling.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Measurable Impact</h4>
+            <ul>
+              <li>Improved endpoint compliance and stability.</li>
+              <li>Reduced endpoint-related incidents and support effort.</li>
+              <li>Lower infrastructure and maintenance costs through modernization.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="impact-justification"><strong>Justification:</strong> Delivered a scalable and standardized endpoint platform that improved security, reduced operational overhead, and enabled IT teams to manage growth without additional headcount.</p>
+      </article>
+
+      <article class="glass card impact-project">
+        <header class="impact-head">
+          <span class="impact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h13"/><path d="M12 5l7 7-7 7"/><path d="M3 19V5"/></svg>
+          </span>
+          <div class="impact-titles">
+            <span class="impact-cat">Project 4 · Migrations</span>
+            <h3>Legacy Endpoint & Identity Platform Migration</h3>
+          </div>
+          <span class="impact-rating">Exceeds Expectations</span>
+        </header>
+        <div class="impact-goals" aria-label="Company goals alignment">
+          <span>Modernization & Cloud Adoption</span>
+          <span>Cost Optimization</span>
+          <span>Operational Excellence</span>
+        </div>
+        <div class="impact-cols">
+          <div>
+            <h4>Contribution</h4>
+            <ul>
+              <li>Designed and led migration strategy from legacy platforms.</li>
+              <li>Ensured minimal business disruption through pilots and phased rollout.</li>
+              <li>Acted as escalation point for complex migration challenges.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Measurable Impact</h4>
+            <ul>
+              <li>Reduced technical debt and legacy platform dependency.</li>
+              <li>Lower licensing, infrastructure, and maintenance costs.</li>
+              <li>Improved agility for future initiatives.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="impact-justification"><strong>Justification:</strong> Successfully executed complex migrations with strong architectural ownership, reducing long-term cost and positioning the organization for future scalability and innovation.</p>
+      </article>
+    </section>
+    <section id="certifications" class="glass card full-section reveal premium-achievements">
+      <div class="section-title"><span>03</span><h2>Awards, Certifications & Trainings</h2></div>
+      <p class="section-subtitle">Click any card or image to expand it into a larger detailed view.</p>
+      <div class="achievement-tabs" role="tablist" aria-label="Achievement categories">
+        <button class="achievement-tab active" data-ach-filter="all">All</button>
+        <button class="achievement-tab" data-ach-filter="Awards">Awards</button>
+        <button class="achievement-tab" data-ach-filter="Certifications">Certifications</button>
+        <button class="achievement-tab" data-ach-filter="Trainings">Trainings</button>
+      </div>
+      <div id="achievementGrid" class="achievement-grid"></div>
+    </section>
+    <section id="badges" class="glass card full-section reveal">
+      <div class="section-title"><span>04</span><h2>Credential Profiles</h2></div>
+      <p class="section-subtitle">Click a card to open the verified external profile.</p>
+      <div class="profile-link-grid">
+        <a class="profile-link-card credly-profile" href="https://www.credly.com/users/jai-abishek/badges#credly" target="_blank" rel="noopener" aria-label="Open Jai Abishek Credly profile">
+          <div class="profile-card-icon">🏅</div>
+          <div class="profile-card-copy">
+            <span class="profile-chip">Digital Badges</span>
+            <h3>Credly Profile</h3>
+            <p>View Jai Abishek's verified Credly badges and digital credentials.</p>
+            <strong>Open Credly Profile →</strong>
+          </div>
+        </a>
+        <a class="profile-link-card learn-profile" href="https://learn.microsoft.com/en-us/users/jaiabishek/?tab=credentials-tab" target="_blank" rel="noopener" aria-label="Open Jai Abishek Microsoft Learn profile">
+          <div class="profile-card-icon">📘</div>
+          <div class="profile-card-copy">
+            <span class="profile-chip">Courses & Credentials</span>
+            <h3>Microsoft Learn Profile</h3>
+            <p>View completed Microsoft Learn credentials, courses, modules, and achievements.</p>
+            <strong>Open Microsoft Learn →</strong>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section id="contact" class="contact-section glass reveal"><div><span class="eyebrow">Ready to collaborate?</span><h2>Let’s build secure AI-powered workplace platforms.</h2><p>Bengaluru, India  •  +91-9789964423</p><p><a href="mailto:jaiabishek@live.in">jaiabishek@live.in</a> • <a href="mailto:jaiabishek@gmail.com">jaiabishek@gmail.com</a> • <a href="mailto:jaiabishek@jajtechi.com">jaiabishek@jajtechi.com</a></p></div><a class="primary-btn" href="assets/Jai Abishek - 2026.pdf">Download Resume</a></section>
+  </main>
+  <div id="experienceModal" class="modal" aria-hidden="true"><div class="modal-panel"><button class="modal-close" id="modalClose">×</button><div id="modalContent"></div></div></div>
+  <script src="app.js"></script>
+</body>
+</html>

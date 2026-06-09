@@ -1,0 +1,933 @@
+:root{--bg:#07111f;--panel:rgba(13,28,50,.74);--panel2:rgba(255,255,255,.07);--text:#f7fbff;--muted:#aebfd4;--line:rgba(255,255,255,.15);--brand:#25d5ff;--brand2:#7c5cff;--ok:#72f2bd;--shadow:0 24px 70px rgba(0,0,0,.35)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at top left,#132c55 0,#07111f 38%,#050914 100%);color:var(--text);min-height:100vh}.light{--bg:#f5f8ff;--panel:rgba(255,255,255,.82);--panel2:rgba(0,0,0,.04);--text:#071429;--muted:#53657a;--line:rgba(7,20,41,.13)}a{color:inherit}.bg-orb{position:fixed;border-radius:50%;filter:blur(55px);opacity:.42;z-index:-2}.orb-a{width:360px;height:360px;background:#25d5ff;top:-80px;right:18%}.orb-b{width:300px;height:300px;background:#7c5cff;bottom:5%;left:12%}.grid-noise{position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:42px 42px;z-index:-3}.glass{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(20px)}.sidebar{position:fixed;left:18px;top:18px;bottom:18px;width:290px;border-radius:28px;padding:22px;display:flex;flex-direction:column;gap:22px;z-index:10}.pill{display:inline-flex;padding:8px 11px;border-radius:999px;background:rgba(114,242,189,.13);color:var(--ok);font-size:12px;font-weight:800}nav{display:grid;gap:8px}nav a{text-decoration:none;color:var(--muted);padding:13px 14px;border-radius:16px;font-weight:800}nav a:hover,nav a.active{background:linear-gradient(135deg,rgba(37,213,255,.18),rgba(124,92,255,.15));color:var(--text)}main{margin-left:326px;padding:18px;width:calc(100% - 326px);max-width:none}.topbar{position:sticky;top:18px;z-index:5;border-radius:24px;padding:18px 22px;display:flex;justify-content:space-between;gap:15px;align-items:center}.topbar h2{margin:5px 0 0;font-size:24px}.eyebrow{color:var(--brand);font-size:12px;letter-spacing:.13em;text-transform:uppercase;font-weight:900}.top-actions,.hero-buttons{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.primary-btn,.ghost-btn,.icon-btn{border:0;text-decoration:none;border-radius:15px;padding:12px 16px;font-weight:900;cursor:pointer}.primary-btn{background:linear-gradient(135deg,var(--brand),var(--brand2));color:white}.ghost-btn,.icon-btn{background:var(--panel2);color:var(--text);border:1px solid var(--line)}.hero{margin-top:18px;border-radius:32px;padding:34px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:28px;align-items:center}.hero h1{font-size:clamp(32px,5vw,72px);line-height:1.02;margin:16px 0}.hero p{color:var(--muted);font-size:18px;line-height:1.7;max-width:900px}.status-dot{display:inline-flex;color:var(--ok);font-weight:900}.hero-panel{min-height:360px;display:grid;place-items:center}.hero-panel canvas{max-width:420px;max-height:420px}.stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin:18px 0}.stat-card{border-radius:24px;padding:24px;text-align:center}.stat-card strong{display:block;font-size:42px}.stat-card span{color:var(--muted);font-weight:800}.card{border-radius:28px;padding:28px;margin:18px 0}.full-section{width:100%}.section-title{display:flex;gap:14px;align-items:center;margin-bottom:8px}.section-title span{color:var(--brand);font-weight:900}.section-title h2{margin:0;font-size:30px}.section-subtitle{color:var(--muted);line-height:1.6;margin:0 0 22px}.skills-dashboard{display:grid;grid-template-columns:minmax(300px,420px) 1fr;gap:24px;align-items:stretch}.chart-wrap{position:relative;min-height:380px;display:grid;place-items:center;border:1px solid var(--line);border-radius:26px;background:var(--panel2);padding:20px}.chart-center{position:absolute;text-align:center;pointer-events:none}.chart-center strong{display:block;font-size:42px}.chart-center span{color:var(--muted);font-weight:900}.skill-detail{border:1px solid var(--line);border-radius:26px;background:var(--panel2);padding:24px;min-height:380px}.skill-detail h3{font-size:26px;margin:0 0 10px}.skill-detail .score{color:var(--brand);font-weight:900}.skill-detail ul,.modal-panel ul{columns:2;gap:35px;line-height:1.75;color:var(--muted);padding-left:22px}.bar{height:9px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--brand2));border-radius:999px}.search-box{width:100%;padding:16px 18px;border-radius:18px;border:1px solid var(--line);background:var(--panel2);color:var(--text);font-size:16px;margin-bottom:18px}.experience-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}.exp-card{border:1px solid var(--line);background:var(--panel2);border-radius:24px;padding:22px;cursor:pointer;transition:.2s;display:flex;flex-direction:column;gap:10px}.exp-card:hover{transform:translateY(-5px);border-color:rgba(37,213,255,.55)}.exp-card time{color:var(--brand);font-weight:900}.exp-card h3{margin:0;font-size:22px}.exp-card p{margin:0;color:var(--muted)}.tag-row{display:flex;gap:8px;flex-wrap:wrap}.tag-row span{font-size:12px;font-weight:900;padding:7px 9px;border-radius:999px;background:rgba(37,213,255,.12);color:var(--brand)}.impact-grid,.two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.impact h3{font-size:22px}.impact p,.award-list{color:var(--muted);line-height:1.7}.badge-wall{display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap}.badge-wall img{max-width:160px;max-height:160px;object-fit:contain}.achievement-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 22px}.achievement-tab{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:999px;padding:10px 15px;font-weight:900;cursor:pointer}.achievement-tab.active,.achievement-tab:hover{background:linear-gradient(135deg,rgba(37,213,255,.22),rgba(124,92,255,.2));border-color:rgba(37,213,255,.55)}.achievement-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}.achievement-card{border:1px solid var(--line);background:var(--panel2);border-radius:24px;overflow:hidden;cursor:pointer;transition:.2s;text-align:left;color:inherit;padding:0}.achievement-card:hover{transform:translateY(-5px);border-color:rgba(37,213,255,.58);box-shadow:0 18px 50px rgba(0,0,0,.22)}.achievement-thumb{width:100%;aspect-ratio:16/10;background:rgba(255,255,255,.06);display:grid;place-items:center;border-bottom:1px solid var(--line);overflow:hidden}.achievement-thumb img{width:100%;height:100%;object-fit:cover;transition:.25s}.achievement-card:hover .achievement-thumb img{transform:scale(1.05)}.achievement-body{padding:18px}.achievement-type{display:inline-flex;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:900;color:var(--brand);background:rgba(37,213,255,.11);border-radius:999px;padding:6px 9px}.achievement-body h3{font-size:19px;line-height:1.25;margin:12px 0 8px}.achievement-body p{color:var(--muted);line-height:1.55;margin:0}.achievement-expanded{display:grid;grid-template-columns:minmax(280px,420px) 1fr;gap:26px;align-items:start}.achievement-expanded img{width:100%;border-radius:22px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04)}.achievement-expanded p{color:var(--muted);line-height:1.75}.achievement-expanded .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:18px 0}.achievement-expanded .fact{border:1px solid var(--line);border-radius:16px;padding:13px;background:var(--panel2)}.achievement-expanded .fact strong{display:block;color:var(--brand);font-size:12px;text-transform:uppercase;letter-spacing:.08em}.achievement-expanded .fact span{display:block;margin-top:5px;font-weight:800}.contact-section{border-radius:28px;padding:28px;margin:18px 0 40px;display:flex;justify-content:space-between;gap:20px;align-items:center}.contact-section h2{font-size:32px;margin:8px 0}.contact-section p{color:var(--muted)}.modal{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:100;display:none;align-items:center;justify-content:center;padding:24px}.modal.open{display:flex}.modal-panel{width:min(1180px,96vw);max-height:92vh;overflow:auto;background:#081529;color:#f7fbff;border:1px solid rgba(255,255,255,.16);border-radius:28px;padding:32px;box-shadow:0 40px 100px rgba(0,0,0,.6);animation:zoomIn .25s ease}.light .modal-panel{background:#fff;color:#071429}.modal-close{position:sticky;top:0;float:right;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.1);color:inherit;font-size:28px;cursor:pointer}.modal-panel h2{font-size:36px;margin:0 0 8px}.modal-meta{color:var(--brand);font-weight:900}.modal-section{margin-top:24px}.modal-section h3{font-size:22px;margin-bottom:8px}.modal-panel li{break-inside:avoid}.reveal{opacity:0;transform:translateY(16px);transition:.55s}.reveal.show{opacity:1;transform:none}@keyframes zoomIn{from{transform:scale(.88);opacity:0}to{transform:scale(1);opacity:1}}@media(max-width:1100px){.sidebar{position:relative;left:auto;top:auto;bottom:auto;width:auto;margin:14px}nav{grid-template-columns:repeat(3,1fr)}main{margin-left:0;width:100%;padding:14px}.topbar{top:8px}.hero,.skills-dashboard,.impact-grid,.two-col{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:640px){.achievement-expanded{grid-template-columns:1fr}.achievement-tabs{gap:8px}.achievement-tab{padding:9px 12px}.sidebar{border-radius:20px;padding:16px}nav{grid-template-columns:1fr 1fr}.topbar,.achievement-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 22px}.achievement-tab{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:999px;padding:10px 15px;font-weight:900;cursor:pointer}.achievement-tab.active,.achievement-tab:hover{background:linear-gradient(135deg,rgba(37,213,255,.22),rgba(124,92,255,.2));border-color:rgba(37,213,255,.55)}.achievement-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}.achievement-card{border:1px solid var(--line);background:var(--panel2);border-radius:24px;overflow:hidden;cursor:pointer;transition:.2s;text-align:left;color:inherit;padding:0}.achievement-card:hover{transform:translateY(-5px);border-color:rgba(37,213,255,.58);box-shadow:0 18px 50px rgba(0,0,0,.22)}.achievement-thumb{width:100%;aspect-ratio:16/10;background:rgba(255,255,255,.06);display:grid;place-items:center;border-bottom:1px solid var(--line);overflow:hidden}.achievement-thumb img{width:100%;height:100%;object-fit:cover;transition:.25s}.achievement-card:hover .achievement-thumb img{transform:scale(1.05)}.achievement-body{padding:18px}.achievement-type{display:inline-flex;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:900;color:var(--brand);background:rgba(37,213,255,.11);border-radius:999px;padding:6px 9px}.achievement-body h3{font-size:19px;line-height:1.25;margin:12px 0 8px}.achievement-body p{color:var(--muted);line-height:1.55;margin:0}.achievement-expanded{display:grid;grid-template-columns:minmax(280px,420px) 1fr;gap:26px;align-items:start}.achievement-expanded img{width:100%;border-radius:22px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04)}.achievement-expanded p{color:var(--muted);line-height:1.75}.achievement-expanded .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:18px 0}.achievement-expanded .fact{border:1px solid var(--line);border-radius:16px;padding:13px;background:var(--panel2)}.achievement-expanded .fact strong{display:block;color:var(--brand);font-size:12px;text-transform:uppercase;letter-spacing:.08em}.achievement-expanded .fact span{display:block;margin-top:5px;font-weight:800}.contact-section{flex-direction:column;align-items:flex-start}.hero,.card{padding:20px;border-radius:22px}.stats-grid,.experience-grid,.skill-cards{grid-template-columns:1fr}.skill-detail ul,.modal-panel ul{columns:1}.modal{padding:10px}.modal-panel{padding:22px}.hero h1{font-size:34px}}
+
+/* Interactive skills ring upgrade */
+.interactive-skills{grid-template-columns:minmax(230px,.75fr) minmax(430px,1.55fr) minmax(260px,.85fr)!important;align-items:center;gap:18px}.skills-ring-wrap{min-height:520px;padding:18px}.skills-ring-wrap canvas{width:100%!important;height:100%!important;max-width:560px;max-height:560px}.chart-center small{display:block;margin-top:8px;color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}.skills-legend{display:flex;flex-direction:column;gap:8px;border:1px solid var(--line);border-radius:24px;background:var(--panel2);padding:14px;max-height:520px;overflow:auto}.legend-skill{width:100%;display:grid;grid-template-columns:14px 1fr auto;gap:10px;align-items:center;text-align:left;border:1px solid transparent;background:transparent;color:var(--text);border-radius:14px;padding:10px 9px;cursor:pointer;transition:.18s}.legend-skill:hover,.legend-skill.active{background:rgba(37,213,255,.12);border-color:rgba(37,213,255,.48);transform:translateX(3px)}.legend-dot{width:14px;height:14px;border-radius:5px;box-shadow:0 0 18px rgba(37,213,255,.25)}.legend-title{font-size:13px;font-weight:900;line-height:1.25}.legend-percent{font-size:12px;color:var(--brand);font-weight:900}.compact-tools-panel{min-height:520px;max-height:520px;overflow:auto;padding:20px}.compact-tools-panel h3{font-size:22px}.skill-summary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}.skill-summary{border:1px solid var(--line);border-radius:16px;padding:12px;background:rgba(255,255,255,.045)}.skill-summary strong{display:block;color:var(--brand);font-size:11px;text-transform:uppercase;letter-spacing:.08em}.skill-summary span{display:block;margin-top:5px;font-weight:900}.tool-chip-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.tool-chip{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);border-radius:999px;padding:7px 10px;color:var(--muted);font-size:12px;font-weight:800}.skill-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.small-btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:12px;padding:10px 12px;font-weight:900;cursor:pointer}.small-btn:hover{border-color:rgba(37,213,255,.55);color:var(--brand)}.modal-skill-grid{display:grid;grid-template-columns:280px 1fr;gap:22px;align-items:start}.modal-skill-score{border:1px solid var(--line);border-radius:22px;padding:22px;background:var(--panel2);text-align:center}.modal-skill-score strong{font-size:52px;color:var(--brand)}.modal-skill-tools{columns:2;line-height:1.8;color:var(--muted)}
+@media(max-width:1280px){.interactive-skills{grid-template-columns:minmax(210px,.8fr) minmax(380px,1.4fr)!important}.compact-tools-panel{grid-column:1/-1;min-height:auto;max-height:none}.skills-ring-wrap{min-height:460px}}
+@media(max-width:900px){.interactive-skills{grid-template-columns:1fr!important}.skills-legend{max-height:none}.skills-ring-wrap{min-height:390px}.compact-tools-panel{max-height:none}.modal-skill-grid{grid-template-columns:1fr}.modal-skill-tools{columns:1}}
+
+/* Skills layout fix - wide interactive ring with left titles and shorter tools panel */
+#skills.full-section{overflow:hidden}
+.skills-dashboard.interactive-skills{
+  display:grid !important;
+  grid-template-columns:minmax(230px, .75fr) minmax(420px, 1.65fr) minmax(240px, .8fr) !important;
+  gap:22px !important;
+  align-items:center !important;
+  width:100% !important;
+}
+.skills-ring-wrap{
+  min-height:520px !important;
+  height:clamp(460px, 48vw, 640px) !important;
+  width:100% !important;
+  padding:22px !important;
+}
+#skillsRing{width:100% !important;height:100% !important;max-width:620px !important;max-height:620px !important}
+.skills-legend{max-height:560px !important;overflow:auto !important;padding:12px !important}
+.legend-skill{width:100%;display:grid;grid-template-columns:14px 1fr auto;align-items:center;gap:10px;border:1px solid var(--line);background:rgba(255,255,255,.055);color:var(--text);border-radius:14px;padding:11px 10px;cursor:pointer;text-align:left;transition:.2s ease}
+.legend-skill:hover,.legend-skill.active{transform:translateX(4px);border-color:rgba(37,213,255,.65);background:rgba(37,213,255,.13)}
+.legend-dot{width:14px;height:14px;border-radius:5px;display:inline-block;box-shadow:0 0 16px currentColor}.legend-title{font-weight:900;font-size:13px;line-height:1.25}.legend-percent{font-weight:900;color:var(--brand);font-size:12px}
+.compact-tools-panel{min-height:auto !important;max-height:560px !important;overflow:auto !important;padding:18px !important}.compact-tools-panel h3{font-size:20px !important}
+.skill-summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}.skill-summary{border:1px solid var(--line);border-radius:14px;padding:10px;background:rgba(255,255,255,.05)}.skill-summary strong{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}.skill-summary span{font-weight:900;font-size:18px}.tool-chip-list{max-height:245px;overflow:auto;padding-right:4px}
+.skill-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.small-btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:12px;padding:9px 11px;font-weight:900;cursor:pointer}.small-btn:hover{border-color:rgba(37,213,255,.7)}
+
+@media (max-width:1100px){.skills-dashboard.interactive-skills{grid-template-columns:1fr !important}.skills-ring-wrap{min-height:430px !important;height:430px !important}.compact-tools-panel,.skills-legend{max-height:none !important}}
+@media (max-width:640px){.skills-ring-wrap{min-height:340px !important;height:340px !important;padding:12px !important}.chart-center strong{font-size:32px !important}.chart-center span{font-size:12px !important}}
+
+/* Credly badges and Microsoft Learn sections */
+.badge-toolbar{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:18px 0}.badge-toolbar .search-box{margin:0;flex:1;min-width:260px}.compact-link{white-space:nowrap;text-decoration:none}.sync-status{margin:8px 0 16px;color:var(--muted);font-size:14px;font-weight:700}.badge-grid,.learn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}.credly-card,.learn-card{border:1px solid var(--line);background:var(--panel2);border-radius:22px;padding:16px;text-align:left;color:var(--text);box-shadow:0 14px 34px rgba(0,0,0,.16);transition:.25s ease;cursor:pointer;min-height:100%}.credly-card:hover,.learn-card:hover{transform:translateY(-5px);border-color:rgba(37,213,255,.55);box-shadow:0 22px 50px rgba(37,213,255,.13)}.credly-image{width:112px;height:112px;margin:2px auto 14px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.22),rgba(37,213,255,.12));border:1px solid rgba(255,255,255,.18);overflow:hidden}.credly-image img{width:100%;height:100%;object-fit:contain;padding:8px}.credly-fallback{font-size:38px;font-weight:900;color:var(--brand)}.credly-card h3,.learn-card h3{margin:6px 0 8px;font-size:17px;line-height:1.25}.credly-card p,.learn-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}.credly-meta,.learn-meta{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.credly-meta span,.learn-meta span{font-size:11px;font-weight:900;padding:6px 8px;border-radius:999px;background:rgba(37,213,255,.12);color:var(--brand)}.credly-open{display:inline-block;margin-top:12px;font-size:12px;font-weight:900;color:var(--ok);text-decoration:none}.learn-card{cursor:default}.learn-icon{width:50px;height:50px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(37,213,255,.24),rgba(124,92,255,.22));font-size:24px;margin-bottom:10px}.modal-badge-grid{display:grid;grid-template-columns:170px 1fr;gap:24px;align-items:start}.modal-badge-grid img{width:160px;height:160px;object-fit:contain;border-radius:28px;background:var(--panel2);padding:12px}.modal-link-row{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}@media(max-width:760px){.modal-badge-grid{grid-template-columns:1fr}.modal-badge-grid img{width:130px;height:130px}.badge-toolbar{align-items:stretch}.badge-toolbar .ghost-btn{width:100%;justify-content:center}.badge-grid,.learn-grid{grid-template-columns:1fr}}
+
+.credly-empty{grid-column:1/-1;text-align:center;border:1px dashed var(--line);border-radius:24px;background:var(--panel2);padding:28px}.credly-empty h3{margin:0 0 10px}.credly-empty p{color:var(--muted);line-height:1.7;max-width:760px;margin:0 auto 18px}
+
+/* Clean credential profile link cards */
+.profile-link-grid{display:grid;grid-template-columns:repeat(2,minmax(280px,1fr));gap:22px;margin-top:22px}.profile-link-card{position:relative;overflow:hidden;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;min-height:190px;padding:26px;border-radius:28px;border:1px solid rgba(255,255,255,.16);background:linear-gradient(135deg,rgba(37,213,255,.14),rgba(124,92,255,.12));color:var(--text);text-decoration:none;box-shadow:0 22px 55px rgba(0,0,0,.22);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}.profile-link-card:before{content:"";position:absolute;inset:auto -80px -100px auto;width:220px;height:220px;border-radius:999px;background:radial-gradient(circle,rgba(255,255,255,.18),transparent 65%);pointer-events:none}.profile-link-card:hover{transform:translateY(-7px) scale(1.01);border-color:rgba(37,213,255,.55);box-shadow:0 28px 70px rgba(37,213,255,.16)}.profile-card-icon{width:84px;height:84px;display:grid;place-items:center;border-radius:24px;font-size:40px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 0 30px rgba(255,255,255,.08)}.profile-card-copy{position:relative;z-index:1}.profile-chip{display:inline-flex;align-items:center;margin-bottom:10px;padding:7px 10px;border-radius:999px;font-size:12px;font-weight:900;letter-spacing:.03em;color:var(--brand);background:rgba(37,213,255,.13)}.profile-card-copy h3{margin:0 0 8px;font-size:26px;line-height:1.1}.profile-card-copy p{margin:0 0 14px;color:var(--muted);line-height:1.55}.profile-card-copy strong{color:var(--ok);font-size:14px}.credly-profile{background:linear-gradient(135deg,rgba(255,194,71,.16),rgba(37,213,255,.12))}.learn-profile{background:linear-gradient(135deg,rgba(37,213,255,.16),rgba(124,92,255,.14))}@media(max-width:860px){.profile-link-grid{grid-template-columns:1fr}.profile-link-card{grid-template-columns:1fr;text-align:left}}
+
+/* Updated 8-card stats dashboard */
+.stats-grid{
+  grid-template-columns:repeat(8,minmax(110px,1fr)) !important;
+  gap:12px !important;
+  align-items:stretch;
+}
+.stat-card{
+  min-height:118px;
+  padding:18px 12px !important;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.stat-card strong{
+  font-size:clamp(28px,2.4vw,42px) !important;
+  line-height:1;
+}
+.stat-card span{
+  margin-top:10px;
+  font-size:clamp(11px,.85vw,14px);
+  line-height:1.25;
+}
+@media(max-width:1500px){.stats-grid{grid-template-columns:repeat(4,minmax(0,1fr)) !important}.stat-card{min-height:112px}}
+@media(max-width:900px){.stats-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+@media(max-width:520px){.stats-grid{grid-template-columns:1fr !important}.stat-card{min-height:96px}}
+
+/* Premium UI refresh with real profile and credential artwork */
+body::before{content:"";position:fixed;inset:0;background:linear-gradient(rgba(7,17,31,.84),rgba(5,9,20,.9)),url('assets/hero-bg.jpg') center/cover no-repeat;z-index:-4;transform:scale(1.02)}
+.sidebar{background:linear-gradient(180deg,rgba(13,28,50,.88),rgba(7,17,31,.72));box-shadow:0 30px 90px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.08)}
+
+/*.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(13,28,50,.86),rgba(17,35,69,.74)),url('assets/hero-bg.jpg') center/cover no-repeat;border:1px solid rgba(255,255,255,.18)}*/
+.hero::after{content:"";position:absolute;right:-100px;top:-120px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(37,213,255,.28),transparent 62%);pointer-events:none}.hero>*{position:relative;z-index:1}
+.premium-stats{grid-template-columns:repeat(8,minmax(120px,1fr)) !important;align-items:stretch}.premium-stats .stat-card{position:relative;overflow:hidden;min-height:130px;background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.035));border:1px solid rgba(255,255,255,.16)}.premium-stats .stat-card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0,rgba(37,213,255,.22),transparent 48%);opacity:.9}.premium-stats .stat-card strong,.premium-stats .stat-card span{position:relative}.premium-stats .stat-card strong{font-size:clamp(30px,2.8vw,46px);background:linear-gradient(135deg,#fff,var(--brand));-webkit-background-clip:text;background-clip:text;color:transparent}.premium-stats .stat-card span{font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.premium-achievements{background:linear-gradient(180deg,rgba(13,28,50,.82),rgba(10,21,38,.7));border-color:rgba(255,255,255,.18)}
+.achievement-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}.achievement-card{position:relative;border-radius:28px;background:linear-gradient(180deg,rgba(255,255,255,.11),rgba(255,255,255,.045));box-shadow:0 24px 70px rgba(0,0,0,.25);min-height:390px}.achievement-card::after{content:"Expand";position:absolute;top:14px;right:14px;padding:7px 10px;border-radius:999px;background:rgba(7,17,31,.78);border:1px solid rgba(255,255,255,.18);font-size:11px;font-weight:900;color:#fff;letter-spacing:.08em;text-transform:uppercase}.achievement-card:hover{transform:translateY(-8px) scale(1.01);box-shadow:0 34px 90px rgba(0,0,0,.36),0 0 0 1px rgba(37,213,255,.26)}.achievement-thumb{aspect-ratio:16/11;background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(37,213,255,.05));padding:14px}.achievement-thumb img{object-fit:contain;border-radius:18px;background:rgba(255,255,255,.03)}.achievement-body{background:linear-gradient(180deg,rgba(7,17,31,.08),rgba(7,17,31,.18));min-height:154px}.achievement-body h3{font-size:20px}.achievement-type{box-shadow:inset 0 0 0 1px rgba(37,213,255,.28)}
+.achievement-expanded{grid-template-columns:minmax(360px,620px) minmax(280px,1fr);align-items:center}.achievement-expanded img{max-height:76vh;object-fit:contain;background:#fff;padding:12px;box-shadow:0 25px 80px rgba(0,0,0,.35)}.modal-panel{background:linear-gradient(180deg,#081529,#07111f);border:1px solid rgba(37,213,255,.22)}.modal-close{z-index:2;background:rgba(37,213,255,.14);border-color:rgba(37,213,255,.35)}
+.profile-link-card{position:relative;overflow:hidden}.profile-link-card::before{content:"";position:absolute;inset:auto -20% -45% -20%;height:140px;background:radial-gradient(circle,rgba(37,213,255,.22),transparent 62%);transition:.3s}.profile-link-card:hover::before{transform:translateY(-25px)}
+@media(max-width:1500px){.premium-stats{grid-template-columns:repeat(4,minmax(0,1fr)) !important}}
+@media(max-width:900px){.premium-stats{grid-template-columns:repeat(2,minmax(0,1fr)) !important}.achievement-expanded{grid-template-columns:1fr}.achievement-expanded img{max-height:62vh}}
+@media(max-width:520px){.premium-stats{grid-template-columns:1fr !important}.achievement-grid{grid-template-columns:1fr}.achievement-card{min-height:auto}}
+
+/* ============================================================
+   THEME FIX: proper dark/light mode support
+   These rules override hardcoded dark values when .light is on <body>.
+   The default (no .light class) keeps the original dark theme intact.
+   ============================================================ */
+
+/* Refined token set so light mode has proper contrast */
+body.light{
+  --bg:#eef2f9;
+  --panel:rgba(255,255,255,.86);
+  --panel2:rgba(15,30,55,.05);
+  --text:#0b1a33;
+  --muted:#4a5b75;
+  --line:rgba(11,26,51,.14);
+  --brand:#0a86c4;
+  --brand2:#5a3df0;
+  --ok:#0a9d62;
+  --shadow:0 24px 70px rgba(20,40,80,.12);
+}
+
+/* Body background — dark gradient is hardcoded; swap it in light mode */
+body.light{
+  background:radial-gradient(circle at top left,#dbe6f7 0,#eef2f9 42%,#f5f8ff 100%) !important;
+  color:var(--text);
+}
+
+/* Hero-bg overlay (body::before) is hardcoded dark — lighten it in light mode */
+body.light::before{
+  background:linear-gradient(rgba(238,242,249,.86),rgba(245,248,255,.92)),url('assets/hero-bg.jpg') center/cover no-repeat !important;
+}
+
+/* Sidebar uses a hardcoded dark gradient — replace it in light mode */
+body.light .sidebar{
+  background:linear-gradient(180deg,rgba(255,255,255,.92),rgba(255,255,255,.78)) !important;
+  box-shadow:0 30px 90px rgba(20,40,80,.12), inset 0 1px 0 rgba(255,255,255,.6) !important;
+}
+
+/* Background orbs are too saturated against a light page */
+body.light .bg-orb{opacity:.22}
+body.light .grid-noise{
+  background-image:linear-gradient(rgba(11,26,51,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(11,26,51,.05) 1px,transparent 1px);
+}
+
+/* Premium stat cards have hardcoded white-to-brand gradient text and dark gradient backgrounds */
+body.light .premium-stats .stat-card{
+  background:linear-gradient(160deg,rgba(255,255,255,.92),rgba(240,245,255,.7)) !important;
+  border:1px solid rgba(11,26,51,.12) !important;
+}
+body.light .premium-stats .stat-card::before{
+  background:radial-gradient(circle at 50% 0,rgba(10,134,196,.18),transparent 55%) !important;
+}
+body.light .premium-stats .stat-card strong{
+  background:none !important;
+  -webkit-background-clip:border-box !important;
+  background-clip:border-box !important;
+  color:#0b1a33 !important;
+  -webkit-text-fill-color:#0b1a33 !important;
+}
+
+/* Premium achievements section has a hardcoded dark gradient */
+body.light .premium-achievements{
+  background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(245,248,255,.78)) !important;
+  border-color:rgba(11,26,51,.14) !important;
+}
+
+/* Achievement cards: hardcoded translucent-white gradient + dark "Expand" pill */
+body.light .achievement-card{
+  background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(240,245,255,.85)) !important;
+  box-shadow:0 18px 50px rgba(20,40,80,.1) !important;
+}
+body.light .achievement-card::after{
+  background:rgba(255,255,255,.92) !important;
+  border-color:rgba(11,26,51,.18) !important;
+  color:var(--brand) !important;
+}
+body.light .achievement-thumb{
+  background:linear-gradient(135deg,rgba(15,30,55,.04),rgba(10,134,196,.06)) !important;
+  border-bottom-color:rgba(11,26,51,.1) !important;
+}
+body.light .achievement-thumb img{background:rgba(15,30,55,.02)}
+
+/* Modal panel has a hardcoded dark gradient that overrides the original .light .modal-panel rule */
+body.light .modal-panel,
+body.light.modal .modal-panel,
+.light .modal-panel{
+  background:linear-gradient(180deg,#ffffff,#f5f8ff) !important;
+  color:#0b1a33 !important;
+  border:1px solid rgba(11,26,51,.14) !important;
+  box-shadow:0 40px 100px rgba(20,40,80,.18) !important;
+}
+body.light .modal-close{
+  background:rgba(10,134,196,.1) !important;
+  border-color:rgba(10,134,196,.3) !important;
+  color:#0b1a33 !important;
+}
+
+/* Modal backdrop — soften from near-black */
+body.light .modal{background:rgba(20,30,55,.45)}
+
+/* Bars / progress fills use a hardcoded white-tinted track */
+body.light .bar{background:rgba(11,26,51,.1)}
+
+/* Tool chips and skill summary use rgba(255,255,255,..) which disappears on white */
+body.light .tool-chip{
+  background:rgba(15,30,55,.05);
+  border-color:rgba(11,26,51,.12);
+  color:var(--muted);
+}
+body.light .skill-summary{background:rgba(15,30,55,.04)}
+body.light .legend-skill{
+  background:rgba(15,30,55,.035);
+  color:var(--text);
+}
+body.light .legend-skill:hover,
+body.light .legend-skill.active{
+  background:rgba(10,134,196,.12);
+  border-color:rgba(10,134,196,.5);
+}
+
+/* Profile pill (cyan-tinted) — keep readable on white */
+body.light .pill{background:rgba(10,157,98,.12);color:var(--ok)}
+
+/* Status dot eyebrow color stays brand-cyan; ensure muted text reads */
+body.light nav a{color:var(--muted)}
+body.light nav a:hover,
+body.light nav a.active{color:var(--text)}
+
+/* Hero ::after radial accent is fine but soften it in light */
+body.light .hero::after{
+  background:radial-gradient(circle,rgba(10,134,196,.18),transparent 62%);
+}
+
+/* Tag row pills use rgba(37,213,255,.12) — works in both, but bump contrast in light */
+body.light .tag-row span,
+body.light .achievement-type{background:rgba(10,134,196,.12);color:var(--brand)}
+
+/* Search box and small buttons */
+body.light .search-box,
+body.light .small-btn,
+body.light .ghost-btn,
+body.light .icon-btn,
+body.light .achievement-tab{
+  background:rgba(255,255,255,.7);
+  color:var(--text);
+}
+
+/* Primary button gradient is brand colors — works in both, just ensure text stays white */
+body.light .primary-btn{color:#fff}
+
+/* Profile link cards — they use the generic .glass background which now lightens automatically;
+   the radial ::before glow in profile-link-card stays brand-tinted which is fine. */
+
+/* ============================================================
+   FLOATING ICON RAIL SIDEBAR
+   Compact vertical dock with icon-only nav and hover labels.
+   Replaces the wide 290px sidebar; main content reclaims the space.
+   ============================================================ */
+
+.sidebar.icon-rail{
+  position:fixed;
+  left:18px;
+  top:50%;
+  transform:translateY(-50%);
+  bottom:auto;
+  width:78px;
+  border-radius:28px;
+  padding:14px 10px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;
+  z-index:20;
+  background:linear-gradient(180deg,rgba(13,28,50,.92),rgba(7,17,31,.78));
+  box-shadow:0 30px 90px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+.rail-avatar{
+  width:54px;height:54px;
+  border-radius:18px;
+  overflow:hidden;
+  border:2px solid rgba(37,213,255,.85);
+  box-shadow:0 12px 32px rgba(37,213,255,.25);
+  flex-shrink:0;
+  display:block;
+}
+.rail-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}
+
+.rail-nav{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  width:100%;
+  align-items:center;
+}
+.rail-nav a{
+  position:relative;
+  width:48px;height:48px;
+  padding:0;
+  border-radius:14px;
+  display:grid;place-items:center;
+  color:var(--muted);
+  text-decoration:none;
+  transition:.2s ease;
+  border:1px solid transparent;
+}
+.rail-nav a svg{width:22px;height:22px}
+.rail-nav a:hover,
+.rail-nav a.active{
+  background:linear-gradient(135deg,rgba(37,213,255,.22),rgba(124,92,255,.18));
+  color:var(--text);
+  border-color:rgba(37,213,255,.35);
+  transform:translateX(2px);
+}
+.rail-nav a.active{box-shadow:inset 0 0 0 1px rgba(37,213,255,.45)}
+
+/* Hover tooltip / flyout label */
+.rail-nav a::after{
+  content:attr(data-label);
+  position:absolute;
+  left:calc(100% + 14px);
+  top:50%;
+  transform:translateY(-50%) translateX(-6px);
+  background:rgba(8,21,41,.95);
+  color:#f7fbff;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.04em;
+  padding:7px 11px;
+  border-radius:10px;
+  border:1px solid rgba(37,213,255,.28);
+  white-space:nowrap;
+  opacity:0;
+  pointer-events:none;
+  transition:.18s ease;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  z-index:50;
+}
+.rail-nav a:hover::after{opacity:1;transform:translateY(-50%) translateX(0)}
+
+/* Reclaim the freed horizontal space for main content */
+main{margin-left:118px !important;width:calc(100% - 118px) !important}
+
+/* Hide any leftover old-sidebar selectors that no longer exist in markup,
+   but defensive in case other CSS targets them */
+.sidebar .profile-card,
+.sidebar .contact-mini,
+.sidebar > nav:not(.rail-nav){display:none}
+
+/* Light mode adaptations */
+body.light .sidebar.icon-rail{
+  background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(245,248,255,.85)) !important;
+  box-shadow:0 30px 90px rgba(20,40,80,.14), inset 0 1px 0 rgba(255,255,255,.7) !important;
+}
+body.light .rail-nav a::after{
+  background:rgba(255,255,255,.98);
+  color:#0b1a33;
+  border-color:rgba(10,134,196,.28);
+  box-shadow:0 10px 30px rgba(20,40,80,.14);
+}
+body.light .rail-nav a:hover,
+body.light .rail-nav a.active{
+  background:linear-gradient(135deg,rgba(10,134,196,.16),rgba(90,61,240,.14));
+}
+
+/* Tablet / mobile: rail goes horizontal, sticks to top */
+@media(max-width:1100px){
+  .sidebar.icon-rail{
+    position:sticky;
+    left:auto;top:10px;
+    transform:none;
+    width:auto;
+    flex-direction:row;
+    border-radius:22px;
+    padding:10px 14px;
+    margin:10px 14px 0;
+    gap:12px;
+    justify-content:flex-start;
+    overflow-x:auto;
+  }
+  .rail-avatar{width:44px;height:44px;border-radius:14px}
+  .rail-nav{flex-direction:row;width:auto;gap:6px}
+  .rail-nav a{width:42px;height:42px;border-radius:12px}
+  .rail-nav a svg{width:20px;height:20px}
+  /* Tooltip below the icon on mobile so it doesn't get clipped */
+  .rail-nav a::after{
+    left:50%;top:calc(100% + 8px);
+    transform:translateX(-50%) translateY(-4px);
+  }
+  .rail-nav a:hover::after{transform:translateX(-50%) translateY(0)}
+  main{margin-left:0 !important;width:100% !important;padding:14px !important}
+}
+
+/* ============================================================
+   ORBIT RADAR — animated domain radar with chips that fly to center
+   ============================================================ */
+
+.orbit-radar{
+  position:relative;
+  width:min(420px,90%);
+  aspect-ratio:1/1;
+  display:grid;
+  place-items:center;
+  --radar-stroke:rgba(160,200,255,.22);
+  --radar-stroke-strong:rgba(160,200,255,.4);
+  --chip-bg:rgba(8,21,41,.78);
+  --chip-border:rgba(37,213,255,.35);
+  --chip-text:#f7fbff;
+  --chip-shadow:0 10px 28px rgba(0,0,0,.35);
+}
+body.light .orbit-radar{
+  --radar-stroke:rgba(11,26,51,.18);
+  --radar-stroke-strong:rgba(11,26,51,.32);
+  --chip-bg:rgba(255,255,255,.92);
+  --chip-border:rgba(10,134,196,.35);
+  --chip-text:#0b1a33;
+  --chip-shadow:0 10px 28px rgba(20,40,80,.16);
+}
+
+/* SVG layers fill the box */
+.orbit-radar > svg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  overflow:visible;
+}
+.orbit-radar .ring{
+  fill:none;
+  stroke:var(--radar-stroke);
+  stroke-width:1;
+}
+.orbit-radar .ring:nth-child(2){stroke:var(--radar-stroke-strong)} /* outer ring slightly stronger */
+.orbit-radar .spoke{
+  stroke:var(--radar-stroke);
+  stroke-width:1;
+  stroke-dasharray:3 4;
+}
+
+/* Grid rotation and sweep rotation are driven by JS (rAF) for reliability */
+.orbit-radar .radar-grid{transform-origin:50% 50%}
+
+.orbit-radar .sweep-rotor{
+  transform-origin:0 0;
+}
+.orbit-radar .sweep-line{
+  stroke:rgba(37,213,255,.85);
+  stroke-width:1.5;
+  filter:drop-shadow(0 0 6px rgba(37,213,255,.6));
+}
+
+/* Core in the middle */
+.radar-core{
+  position:relative;
+  z-index:3;
+  width:78px;height:78px;
+  border-radius:50%;
+  display:grid;place-items:center;
+  background:radial-gradient(circle,rgba(37,213,255,.32),rgba(124,92,255,.18) 60%,transparent 75%);
+  border:1px solid rgba(37,213,255,.45);
+  box-shadow:0 0 30px rgba(37,213,255,.35), inset 0 0 20px rgba(37,213,255,.18);
+  animation:corePulse 2.4s ease-in-out infinite;
+}
+body.light .radar-core{
+  background:radial-gradient(circle,rgba(10,134,196,.22),rgba(90,61,240,.14) 60%,transparent 75%);
+  border-color:rgba(10,134,196,.45);
+  box-shadow:0 0 30px rgba(10,134,196,.25), inset 0 0 20px rgba(10,134,196,.18);
+}
+.radar-core span{
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.06em;
+  color:var(--chip-text);
+  text-transform:uppercase;
+  transition:opacity .2s, transform .2s;
+  white-space:nowrap;
+}
+@keyframes corePulse{
+  0%,100%{transform:scale(1);box-shadow:0 0 30px rgba(37,213,255,.35), inset 0 0 20px rgba(37,213,255,.18)}
+  50%{transform:scale(1.06);box-shadow:0 0 44px rgba(37,213,255,.55), inset 0 0 26px rgba(37,213,255,.28)}
+}
+
+/* Chips orbit around the radar at a fixed radius.
+   Each chip has --angle on it. The wrapper rotates by angle then translates outward,
+   then a second rotation cancels the angle so text reads upright. */
+/* Chips orbit around the radar. JavaScript sets `left`/`top` each frame to
+   produce the rotation; CSS only handles styling and the focused state. */
+.radar-chip{
+  position:absolute;
+  left:50%;top:50%;
+  z-index:2;
+  display:flex;align-items:center;gap:6px;
+  padding:6px 11px;
+  border-radius:999px;
+  background:var(--chip-bg);
+  color:var(--chip-text);
+  border:1px solid var(--chip-border);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.03em;
+  white-space:nowrap;
+  box-shadow:var(--chip-shadow);
+  backdrop-filter:blur(8px);
+  /* JS sets transform: translate(-50%,-50%) translate(x,y). Default keeps it centered. */
+  transform:translate(-50%,-50%);
+  transition:background .35s, color .35s, box-shadow .35s, border-color .35s, opacity .4s;
+}
+.radar-chip i{
+  width:6px;height:6px;border-radius:50%;
+  background:linear-gradient(135deg,var(--brand,#25d5ff),var(--brand2,#7c5cff));
+  box-shadow:0 0 8px rgba(37,213,255,.7);
+  flex-shrink:0;
+}
+.radar-chip b{font-weight:900}
+
+/* Focused chip: JS pins it to center via inline transform; we only style here */
+.radar-chip.focused{
+  z-index:5;
+  background:linear-gradient(135deg,rgba(37,213,255,.95),rgba(124,92,255,.95));
+  color:#fff;
+  border-color:rgba(255,255,255,.65);
+  box-shadow:0 0 40px rgba(37,213,255,.65), 0 18px 50px rgba(0,0,0,.45);
+}
+body.light .radar-chip.focused{
+  background:linear-gradient(135deg,rgba(10,134,196,.98),rgba(90,61,240,.95));
+  color:#fff;
+  border-color:rgba(255,255,255,.85);
+  box-shadow:0 0 40px rgba(10,134,196,.45), 0 18px 50px rgba(20,40,80,.25);
+}
+.radar-chip.focused i{
+  background:#fff;
+  box-shadow:0 0 12px #fff;
+}
+
+/* When a chip is focused, the core label fades to make room (we hide it via JS class) */
+.orbit-radar.focusing .radar-core span{opacity:0;transform:scale(.85)}
+
+/* Hover any chip → bring it forward */
+.radar-chip:hover{
+  cursor:default;
+  border-color:rgba(37,213,255,.7);
+  box-shadow:0 14px 36px rgba(37,213,255,.35);
+}
+
+/* Reduced motion: gentle slow core pulse instead of full pulse animation */
+@media (prefers-reduced-motion: reduce){
+  .radar-core{animation-duration:8s}
+}
+
+/* Hide the old canvas-only sizing rule's effect on the new div (defensive) */
+.hero-panel canvas{display:none}
+
+/* Mobile: shrink */
+@media(max-width:900px){
+  .orbit-radar{width:min(360px,92%)}
+  .radar-core{width:66px;height:66px}
+  .radar-core span{font-size:12px}
+  .radar-chip{font-size:11px;padding:5px 9px}
+}
+
+/* ============================================================
+   HORIZONTAL LEGEND — single-line cards with progress-fill background.
+   Height matches the doughnut ring box so the row aligns visually.
+   ============================================================ */
+
+/* Restore the 3-column dashboard grid */
+.skills-dashboard.interactive-skills{
+  grid-template-columns:minmax(280px,1fr) minmax(380px,1.5fr) minmax(280px,1fr) !important;
+  grid-template-areas:none !important;
+  gap:24px !important;
+  align-items:stretch !important;
+}
+@media(max-width:1100px){
+  .skills-dashboard.interactive-skills{
+    grid-template-columns:1fr !important;
+  }
+}
+
+/* Legend container — stretches to match the row height (set by the ring box) */
+#skillsLegend.skills-legend{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:8px !important;
+  padding:16px !important;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:var(--panel2);
+  height:100% !important;
+  max-height:none !important;
+  overflow-y:auto !important;
+  /* Floor so it never collapses to nothing when row is short */
+  min-height:340px;
+}
+/* Match the detail panel height to the row too */
+.skills-dashboard.interactive-skills .compact-tools-panel{
+  height:100% !important;
+  max-height:none !important;
+  min-height:340px;
+  overflow-y:auto !important;
+}
+/* Pin the ring box to a predictable height so the row height is consistent */
+.skills-dashboard.interactive-skills .skills-ring-wrap{
+  height:520px;
+  min-height:520px;
+}
+@media(max-width:1100px){
+  #skillsLegend.skills-legend,
+  .skills-dashboard.interactive-skills .compact-tools-panel{height:auto !important;max-height:none !important}
+  .skills-dashboard.interactive-skills .skills-ring-wrap{height:auto;min-height:380px}
+}
+
+/* Individual skill row */
+.legend-skill{
+  position:relative;
+  text-align:left;
+  padding:14px 16px !important;
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  grid-template-columns:none !important;
+  gap:10px !important;
+  width:100%;
+  overflow:hidden;
+  isolation:isolate;
+  flex-shrink:0;        /* don't squash when many rows */
+  transition:.2s;
+}
+.legend-skill:hover{transform:translateX(2px)}
+/* Progress fill — colored gradient that sizes to the score */
+.legend-skill .legend-fill{
+  position:absolute;
+  left:0;top:0;bottom:0;
+  z-index:0;
+  pointer-events:none;
+  border-radius:inherit;
+  transition:width .4s ease;
+}
+.legend-skill > :not(.legend-fill){position:relative;z-index:1}
+.legend-skill .legend-dot{
+  width:10px;height:10px;border-radius:50%;flex-shrink:0;
+  box-shadow:0 0 8px currentColor;
+}
+.legend-skill .legend-title{
+  flex:1;min-width:0;
+  font-weight:800;
+  font-size:13px;
+  color:var(--text);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.legend-skill .legend-meta{
+  font-size:11px;
+  color:var(--muted);
+  font-weight:700;
+  letter-spacing:.02em;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.legend-skill .legend-percent{
+  font-weight:900;
+  font-size:13px;
+  color:var(--brand);
+  min-width:42px;
+  text-align:right;
+  flex-shrink:0;
+}
+.legend-skill.active{
+  border-color:rgba(37,213,255,.6) !important;
+  box-shadow:inset 0 0 0 1px rgba(37,213,255,.35);
+}
+
+.legend-skill.active .legend-percent{color:var(--text)}
+
+/* ============================================================
+   IMPACT PROJECTS — detailed performance review cards
+   ============================================================ */
+.impact-grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:1280px){
+  .impact-grid{grid-template-columns:1fr 1fr}
+}
+
+.impact-project{
+  display:flex;flex-direction:column;
+  gap:18px;
+  padding:24px 26px !important;
+  border-radius:24px;
+  position:relative;
+  overflow:hidden;
+}
+/* Subtle accent stripe at the top, tinted by brand */
+.impact-project::before{
+  content:"";
+  position:absolute;left:0;right:0;top:0;height:3px;
+  background:linear-gradient(90deg,var(--brand),var(--brand2));
+  opacity:.7;
+}
+
+.impact-head{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:14px;
+  align-items:flex-start;
+}
+.impact-icon{
+  width:46px;height:46px;
+  border-radius:14px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,rgba(37,213,255,.22),rgba(124,92,255,.2));
+  border:1px solid rgba(37,213,255,.35);
+  color:var(--brand);
+  flex-shrink:0;
+}
+body.light .impact-icon{
+  background:linear-gradient(135deg,rgba(10,134,196,.16),rgba(90,61,240,.14));
+  border-color:rgba(10,134,196,.35);
+  color:var(--brand);
+}
+.impact-icon svg{width:22px;height:22px}
+
+.impact-titles{min-width:0}
+.impact-cat{
+  display:block;
+  color:var(--brand);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-bottom:4px;
+}
+.impact-project h3{
+  margin:0;
+  font-size:20px;
+  line-height:1.25;
+  color:var(--text);
+}
+.impact-project h3 em{
+  font-style:normal;
+  font-weight:700;
+  color:var(--muted);
+  font-size:.9em;
+}
+
+.impact-rating{
+  flex-shrink:0;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:7px 12px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  white-space:nowrap;
+  background:linear-gradient(135deg,rgba(114,242,189,.22),rgba(37,213,255,.18));
+  color:var(--ok);
+  border:1px solid rgba(114,242,189,.45);
+  box-shadow:0 0 18px rgba(114,242,189,.15);
+}
+body.light .impact-rating{
+  background:linear-gradient(135deg,rgba(10,157,98,.16),rgba(10,134,196,.14));
+  color:#0a7d52;
+  border-color:rgba(10,157,98,.4);
+}
+.impact-rating::before{
+  content:"★";
+  font-size:14px;
+}
+
+.impact-goals{
+  display:flex;flex-wrap:wrap;gap:8px;
+}
+.impact-goals span{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:6px 11px;
+  border-radius:999px;
+  font-size:11.5px;
+  font-weight:800;
+  background:rgba(114,242,189,.1);
+  color:var(--ok);
+  border:1px solid rgba(114,242,189,.28);
+}
+.impact-goals span::before{
+  content:"✓";
+  font-weight:900;
+  font-size:11px;
+}
+body.light .impact-goals span{
+  background:rgba(10,157,98,.08);
+  color:#0a7d52;
+  border-color:rgba(10,157,98,.3);
+}
+
+.impact-cols{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+@media(max-width:720px){
+  .impact-cols{grid-template-columns:1fr}
+}
+.impact-cols h4{
+  margin:0 0 8px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--brand);
+}
+.impact-cols ul{
+  margin:0;
+  padding-left:18px;
+  color:var(--muted);
+  line-height:1.65;
+  font-size:13.5px;
+}
+.impact-cols li{margin-bottom:4px}
+.impact-cols li::marker{color:var(--brand)}
+
+.impact-justification{
+  margin:0;
+  padding:14px 18px;
+  border-left:3px solid var(--brand);
+  background:rgba(37,213,255,.07);
+  border-radius:0 14px 14px 0;
+  color:var(--text);
+  font-size:13.5px;
+  line-height:1.65;
+}
+.impact-justification strong{
+  color:var(--brand);
+  font-weight:900;
+  margin-right:4px;
+}
+body.light .impact-justification{
+  background:rgba(10,134,196,.06);
+}
+
+/* Stack vertically on narrow viewports; keep title from bumping rating onto a second line until really tight */
+@media(max-width:560px){
+  .impact-head{grid-template-columns:auto 1fr;grid-template-rows:auto auto;}
+  .impact-rating{grid-column:1/-1;justify-self:start}
+}
+
+/* ============================================================
+   TOPBAR IDENTITY — name as headline, typed role tagline below
+   ============================================================ */
+.topbar-identity{display:flex;flex-direction:column;gap:6px;min-width:0}
+.topbar-name{
+  margin:0;
+  font-size:clamp(32px,3.4vw,44px);
+  line-height:1.05;
+  font-weight:900;
+  letter-spacing:-.02em;
+  background:linear-gradient(135deg,var(--text) 30%,var(--brand) 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+}
+.topbar-typed{
+  margin:0;
+  font-size:15px;
+  font-weight:800;
+  color:var(--brand);
+  letter-spacing:.04em;
+  font-family:"JetBrains Mono","SF Mono",ui-monospace,Menlo,Consolas,monospace;
+  display:flex;align-items:center;gap:2px;
+  min-height:1.4em;
+}
+.topbar-typed #typedRole{white-space:nowrap}
+.typed-caret{
+  display:inline-block;
+  width:2px;height:1em;
+  background:var(--brand);
+  margin-left:2px;
+  animation:caretBlink 1s steps(2,start) infinite;
+  vertical-align:-2px;
+}
+@keyframes caretBlink{50%{opacity:0}}
+
+body.light .topbar-name{
+  background:linear-gradient(135deg,#0b1a33 30%,var(--brand) 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* Tighten on small screens */
+@media(max-width:640px){
+  .topbar-name{font-size:28px}
+  .topbar-typed{font-size:13px}
+}
+
+/* ============================================================
+   GLASSY 3D RING BOX — pairs with the Chart.js glassyDoughnut plugin
+   ============================================================ */
+.skills-dashboard.interactive-skills .skills-ring-wrap{
+  position:relative;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(37,213,255,.10), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.18)),
+    var(--panel2);
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.14),     /* top highlight */
+    inset 0 -1px 0 rgba(0,0,0,.18);          /* bottom shade */
+  overflow:hidden;
+}
+/* Floating accent at the top of the ring box */
+.skills-dashboard.interactive-skills .skills-ring-wrap::before{
+  content:"";
+  position:absolute;
+  inset:auto 18% auto 18%;
+  top:-30px;
+  height:60px;
+  background:radial-gradient(closest-side, rgba(37,213,255,.5), transparent);
+  filter:blur(20px);
+  pointer-events:none;
+  opacity:.7;
+}
+
+body.light .skills-dashboard.interactive-skills .skills-ring-wrap{
+  background:
+    radial-gradient(circle at 50% 30%, rgba(10,134,196,.10), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,.6), rgba(20,40,80,.06)),
+    rgba(255,255,255,.6);
+  border:1px solid rgba(20,40,80,.10);
+  box-shadow:
+    0 30px 80px rgba(20,40,80,.18),
+    inset 0 1px 0 rgba(255,255,255,.9),
+    inset 0 -1px 0 rgba(20,40,80,.06);
+}
+body.light .skills-dashboard.interactive-skills .skills-ring-wrap::before{
+  background:radial-gradient(closest-side, rgba(10,134,196,.45), transparent);
+  opacity:.5;
+}
+
+/* Center number gets a slight inset glow so it feels recessed into the hole */
+.chart-center{
+  z-index:2;
+}
+.chart-center strong{
+  text-shadow:0 2px 14px rgba(37,213,255,.4), 0 0 1px rgba(255,255,255,.6);
+}
+body.light .chart-center strong{
+  text-shadow:0 2px 12px rgba(10,134,196,.25);
+}
